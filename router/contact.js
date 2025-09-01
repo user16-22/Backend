@@ -1,10 +1,6 @@
-const express= require("express");
-const contact = require('./models/contact');
-const router=express.Router();
-const user=require('./router/user')
-
-
-
+const express = require("express");
+const contact = require("../models/contact");
+const router = express.Router();
 
 // POST - Save a new contact message
 router.post("/addinfo", async (req, res) => {
@@ -35,4 +31,5 @@ router.get("/userinfo", async (req, res) => {
   }
 });
 
-
+// **Export the router so Express can use it**
+module.exports = router;

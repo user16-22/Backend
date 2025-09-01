@@ -11,6 +11,8 @@ const UserSchema= new mongoose.Schema({
     },
     mobilenumber:{
         type:String
-    }
+    },
+    createdAt: { type: Date, default: Date.now }
+    
 });
 module.exports=mongoose.model('details',UserSchema);
